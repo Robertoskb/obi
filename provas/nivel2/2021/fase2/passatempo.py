@@ -1,3 +1,5 @@
+# https://olimpiada.ic.unicamp.br/pratique/p2/2021/f2/passatempo/
+
 L, C = (int(i) for i in input().split())
 
 linhas = []
