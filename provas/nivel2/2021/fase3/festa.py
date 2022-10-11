@@ -9,7 +9,6 @@ def sortear(it, n):
 
 N = int(input())
 M = int(input())
-
 suditos = range(N)
 
 for _ in range(M):
