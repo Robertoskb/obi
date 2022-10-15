@@ -12,5 +12,5 @@ for i in range(N):
         if x * y < menor_area:
             menor_area = x * y
             index = i+1
-            
+
 print(index)
