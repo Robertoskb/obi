@@ -1,2 +1,2 @@
 # OBI
- Soluções em Python para as questões da Olímpiada Brasileira de Informática (OBI) 
+ Soluções em Python para as questões da Olimpíada Brasileira de Informática (OBI) 
