@@ -28,13 +28,13 @@ for _ in range(I):
         marcados = [False for _ in range(N)]
         pilha = [cargos[e]]
         while pilha:
-            chefe = pilha.pop()
+            empregado = pilha.pop()
 
-            for c in grafo[chefe]:
-                if not marcados[c]:
-                    menor_idade = min(menor_idade, idades[c])
-                    marcados[c] = True
-                    pilha.append(c)
+            for chefe in grafo[empregado]:
+                if not marcados[chefe]:
+                    menor_idade = min(menor_idade, idades[chefe])
+                    marcados[chefe] = True
+                    pilha.append(chefe)
 
         if menor_idade > 100:
             resps.append('*')
