@@ -25,15 +25,15 @@ for _ in range(I):
 
         menor_idade = 101
 
-        pilha = [chefe for chefe in grafo[cargos[e]]]
+        
         marcados = [False for _ in range(N)]
-
+        pilha = [cargos[e]]
         while pilha:
             chefe = pilha.pop()
-            menor_idade = min(menor_idade, idades[chefe])
 
             for c in grafo[chefe]:
                 if not marcados[c]:
+                    menor_idade = min(menor_idade, idades[c])
                     marcados[c] = True
                     pilha.append(c)
 
