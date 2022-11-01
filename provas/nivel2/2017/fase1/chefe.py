@@ -25,7 +25,6 @@ for _ in range(I):
 
         menor_idade = 101
 
-        
         marcados = [False for _ in range(N)]
         pilha = [cargos[e]]
         while pilha:
