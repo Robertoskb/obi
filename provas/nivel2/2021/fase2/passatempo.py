@@ -16,7 +16,7 @@ for _ in range(L):
         colunas[i].append(variaveis[i])
 
     for v in variaveis:
-        vars_[v] = v
+        vars_[v] = None
 
 
 soma_colunas = [int(i) for i in input().split()]
@@ -28,8 +28,8 @@ def passatempo():
         divisor = C
         set_linhas = set()
         for l in linhas[linha]:
-            if type(vars_[l]) == str:
-                set_linhas.add(vars_[l])
+            if vars_[l] is None:
+                set_linhas.add(l)
             else:
                 soma -= vars_[l]
                 divisor -= 1
@@ -42,8 +42,8 @@ def passatempo():
         divisor = L
         set_colunas = set()
         for c in colunas[coluna]:
-            if type(vars_[c]) == str:
-                set_colunas.add(vars_[c])
+            if vars_[c] is None:
+                set_colunas.add(c)
             else:
                 soma -= vars_[c]
                 divisor -= 1
@@ -52,7 +52,7 @@ def passatempo():
             vars_[set_colunas.pop()] = soma // divisor
 
 
-while any(type(i) == str for i in vars_.values()):
+while None in vars_.values():
     passatempo()
 
 for k, v in sorted(vars_.items()):
