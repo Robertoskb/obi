@@ -5,7 +5,7 @@ casas = {int(input()): i for i in range(N)}
 K = int(input())
 
 for casa in casas:
-    c = k - casa
+    c = K - casa
     if c in casas and casas[c] != casas[casa]:
         print(casa, c)
         break
