@@ -1,3 +1,5 @@
+# https://olimpiada.ic.unicamp.br/pratique/ps/2014/f1/carteiro/
+
 N, M = (int(n) for n in input().split())
 casas = {n: i for i, n in enumerate(input().split())}
 tempo = 0
