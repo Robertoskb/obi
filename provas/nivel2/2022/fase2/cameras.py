@@ -1,3 +1,5 @@
+# https://neps.academy/exercise/2130
+
 from collections import deque
 
 N, M, K = (int(n) for n in input().split())
