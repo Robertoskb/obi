@@ -4,8 +4,10 @@
 # array de strings usando um dicionário como contador, se uma subcadeia das strings já está no dicionário, o seu valor
 # será incrementado, se não, uma nova chave é adicionada com o valor 1, para poder ser incrementado posteriormente
 
+from collections import defaultdict
+
 n = int(input())
-contador = {}
+contador = defaultdict(int)
 senhas = []
 
 for _ in range(n):
@@ -20,11 +22,7 @@ for _ in range(n):
             subcadeias.add(corrente)
 
     for sub in subcadeias:
-        if sub in contador.keys():
-            contador[sub] += 1
-
-        else:
-            contador[sub] = 1
+        contador[sub] += 1
 
 cont = -n
 for senha in senhas:
