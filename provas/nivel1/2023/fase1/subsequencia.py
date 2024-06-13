@@ -1,8 +1,7 @@
 # https://neps.academy/br/exercise/2320
 
 B = int(input().split()[1])
-Sa = [int(x) for x in input().split()]
-Sb = [int(x) for x in input().split()]
+Sa, Sb = [[int(x) for x in input().split()] for _ in range(2)]
 
 i = 0
 
