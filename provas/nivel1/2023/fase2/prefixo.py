@@ -6,7 +6,7 @@ M, Si  = int(input()), input()
 resultado = 0
 
 for i in range(min(N, M)):
-    if P[i] != S[i]:
+    if Pi[i] != Si[i]:
         break
     resultado += 1
 
