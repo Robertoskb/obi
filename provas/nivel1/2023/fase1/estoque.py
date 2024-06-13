@@ -1,4 +1,4 @@
-#https://olimpiada.ic.unicamp.br/static/extras/obi2023/provas/ProvaOBI2023_f1p1.pdf
+# https://neps.academy/br/exercise/2319
 
 estoque = [[int(x) for x in input().split()] for _ in range(int(input().split()[0]))]
 
