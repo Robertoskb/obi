@@ -1,3 +1,5 @@
+# https://neps.academy/br/exercise/329
+
 M, N = [int(x) for x in input().split()]
 mapa = ['.' * (N + 2)] + ['.' + input() + '.' for _ in range(M)] + ['.' * (N + 2)]
 
