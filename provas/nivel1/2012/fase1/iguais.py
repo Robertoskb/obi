@@ -1,3 +1,5 @@
+# https://neps.academy/br/exercise/110
+
 N = int(input())
 valores = input().split()
 
