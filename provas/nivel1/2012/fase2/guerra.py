@@ -1,3 +1,5 @@
+# https://neps.academy/br/exercise/237
+
 N = int(input())
 lista = [int(x) for x in input().split()]
 
