@@ -17,7 +17,7 @@ for i in range(n):
 
 vagas = 1
 
-# ordena por tempo e prioridade para onibus chegando
+# ordena por tempo e prioridade para onibus chegando em caso de empate entre onibus chegando e partindo
 horarios.sort(key=lambda x: (x.tempo, x.tipo == 'c'))
 max_ = 1
 cont = 1
