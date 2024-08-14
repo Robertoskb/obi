@@ -3,36 +3,39 @@
 from collections import defaultdict
 from itertools import combinations
 
-grafo = defaultdict(list)
+
+def find(x):
+    if pai[x] == x:
+        return x
+
+    pai[x] = find(pai[x])
+
+    return pai[x]
+
+
+def join(x, y):
+    x, y = find(x), find(y)
+
+    x, y = sorted((x, y), reverse=True, key=lambda x: peso[x])
+
+    pai[x] = y
+    peso[y] += peso[x]
+
 
 n = int(input())
 
-for _ in range(n-1):
+peso = [1] * n
+pai = [i for i in range(n)]
+
+for i in range(n-1):
     a, b, c = (int(i) for i in input().split())
 
     if not c:
-        grafo[a-1].append(b-1)
-        # grafo[b-1].append(a-1) // não é necessário
-
-
-visitados = [-1] * n
-
-for i in range(n):
-    if visitados[i] == -1:
-        visitados[i] = i
-
-        pilha = grafo[i]
-
-        while pilha:
-            vizinho = pilha.pop()
-            if visitados[vizinho] == -1:
-                visitados[vizinho] = i
-
-                pilha.extend(grafo[vizinho])
+        join(a-1, b-1)
 
 
 contador = defaultdict(int)
-for v in visitados:
-    contador[v] += 1
+for i in range(n):
+    contador[find(i)] += 1
 
 print(sum(a*b for a, b in combinations(contador.values(), 2)))

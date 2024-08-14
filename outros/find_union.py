@@ -1,6 +1,3 @@
-from collections import defaultdict
-
-
 def find(x):
     if pai[x] == x:
         return x
@@ -13,15 +10,12 @@ def find(x):
 def join(x, y):
     x, y = find(x), find(y)
 
-    if peso[x] == peso[y]:
-        pai[x] = y
-        peso[y] += 1
+    x, y = sorted((x, y), reverse=True, key=lambda x: peso[x])
 
-    elif peso[x] > peso[y]:
-        pai[y] = x
-    elif peso[y] > peso[x]:
-        pai[x] = y
+    pai[x] = y
+    peso[y] += peso[x]
 
 
-pai = defaultdict(int)
-peso = defaultdict(int)
+n = int(input())
+pai = [i for i in range(n)]
+peso = [1] * n
