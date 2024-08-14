@@ -24,4 +24,3 @@ for i in range(N):
             break
 
 print(cont)
-
